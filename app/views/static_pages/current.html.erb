@@ -1,0 +1,8 @@
+<% if @cached %>
+  <h2>This request was already cached </h2>
+<% end %>
+
+<% @response["data"].first.each do |k, v| %>
+  <%= k.capitalize + ": #{v}" %>
+  <br>
+<% end %>
